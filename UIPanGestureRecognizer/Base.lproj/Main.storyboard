@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,14 +24,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0216-wood-texture2" translatesAutoresizingMaskIntoConstraints="NO" id="q1U-BD-0S1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bEr-dR-hn7">
+                                <rect key="frame" x="142" y="296" width="91" height="75"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Aeq-UO-bJs">
+                                    <rect key="frame" x="0.0" y="0.0" width="91" height="75"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lku-wE-0lr">
-                                <rect key="frame" x="135" y="257" width="91" height="75"/>
+                                <rect key="frame" x="142" y="296" width="91" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="SH0-PP-W5l"/>
                                     <constraint firstAttribute="width" constant="91" id="Xkc-QF-qhW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <state key="normal" title="Go "/>
+                                <state key="normal" title="Go ">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="A3Q-7F-TT1" kind="presentation" modalPresentationStyle="overFullScreen" id="zaX-yM-GSk">
                                         <segue key="commit" inheritsFrom="parent" id="Ty5-un-djW"/>
@@ -40,13 +52,46 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RCv-R8-jYT">
+                                <rect key="frame" x="0.0" y="520.5" width="375" height="146.5"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3vV-mW-JeC">
+                                        <rect key="frame" x="147" y="32.5" width="80" height="80"/>
+                                        <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="3Jn-NO-euJ"/>
+                                            <constraint firstAttribute="width" constant="80" id="dQZ-9b-heH"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="146.5" id="9la-yP-YMD"/>
+                                    <constraint firstItem="3vV-mW-JeC" firstAttribute="centerY" secondItem="RCv-R8-jYT" secondAttribute="centerY" id="c0m-uR-sfE"/>
+                                    <constraint firstItem="3vV-mW-JeC" firstAttribute="centerX" secondItem="RCv-R8-jYT" secondAttribute="centerX" id="cfv-k8-d0n"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="lku-wE-0lr" firstAttribute="top" secondItem="Q1n-iX-RRg" secondAttribute="bottom" constant="237" id="7sO-Nr-aV9"/>
-                            <constraint firstItem="lku-wE-0lr" firstAttribute="leading" secondItem="ijb-Ra-GZy" secondAttribute="leadingMargin" constant="119" id="Aor-fN-2KT"/>
+                            <constraint firstAttribute="trailing" secondItem="RCv-R8-jYT" secondAttribute="trailing" id="0zs-sT-111"/>
+                            <constraint firstItem="bEr-dR-hn7" firstAttribute="width" secondItem="lku-wE-0lr" secondAttribute="width" id="1TT-Rg-t7f"/>
+                            <constraint firstItem="lku-wE-0lr" firstAttribute="centerX" secondItem="q1U-BD-0S1" secondAttribute="centerX" id="AU0-Gp-p3r"/>
+                            <constraint firstItem="RCv-R8-jYT" firstAttribute="leading" secondItem="ijb-Ra-GZy" secondAttribute="leading" id="C87-Iq-wjC"/>
+                            <constraint firstItem="q1U-BD-0S1" firstAttribute="height" secondItem="ijb-Ra-GZy" secondAttribute="height" id="J8A-p1-Kii"/>
+                            <constraint firstItem="q1U-BD-0S1" firstAttribute="width" secondItem="ijb-Ra-GZy" secondAttribute="width" id="SwE-5z-hcR"/>
+                            <constraint firstItem="bEr-dR-hn7" firstAttribute="centerY" secondItem="lku-wE-0lr" secondAttribute="centerY" id="d7I-PB-Fhv"/>
+                            <constraint firstItem="bEr-dR-hn7" firstAttribute="centerX" secondItem="lku-wE-0lr" secondAttribute="centerX" id="eQd-81-Fgf"/>
+                            <constraint firstItem="q1U-BD-0S1" firstAttribute="centerY" secondItem="ijb-Ra-GZy" secondAttribute="centerY" id="j8B-VU-KP8"/>
+                            <constraint firstItem="q1U-BD-0S1" firstAttribute="centerX" secondItem="ijb-Ra-GZy" secondAttribute="centerX" id="sZF-7F-Nxj"/>
+                            <constraint firstItem="QcF-t1-qaL" firstAttribute="top" secondItem="RCv-R8-jYT" secondAttribute="bottom" id="tBP-Tu-ym3"/>
+                            <constraint firstItem="bEr-dR-hn7" firstAttribute="height" secondItem="lku-wE-0lr" secondAttribute="height" id="twh-bi-a7U"/>
+                            <constraint firstItem="lku-wE-0lr" firstAttribute="centerY" secondItem="q1U-BD-0S1" secondAttribute="centerY" id="vcr-8m-ids"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="eliteView" destination="3vV-mW-JeC" id="gmb-Dn-LgN"/>
+                        <outlet property="visualEffectBlur" destination="bEr-dR-hn7" id="QdX-56-lZs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ifX-A7-vmH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -128,6 +173,9 @@
             <point key="canvasLocation" x="1071" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="0216-wood-texture2" width="990" height="661"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="zaX-yM-GSk"/>
     </inferredMetricsTieBreakers>

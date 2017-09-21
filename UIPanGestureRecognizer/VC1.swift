@@ -11,22 +11,28 @@ import UIKit
 class VC1: UIViewController
 {
 
+    @IBOutlet weak var visualEffectBlur: UIVisualEffectView!
+    
+    @IBOutlet weak var eliteView: UIView!
+
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        eliteView.layer.cornerRadius = eliteView.bounds.size.height/2
+        
+        UIView.animate(withDuration: 1, animations: {
+            self.eliteView.transform = CGAffineTransform(scaleX: 10, y: 10)
+        })
+       
+    }
+    
+    
+
+
     //this function hides the status bar upwards:
     override var prefersStatusBarHidden: Bool
     {
         return true
     }
-    
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
- 
-    
-
-
-
 }

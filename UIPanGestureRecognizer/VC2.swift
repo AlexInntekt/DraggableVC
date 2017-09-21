@@ -50,7 +50,7 @@ class VC2: UIViewController
         let velocity = gesture.velocity(in: self.view)
         print("\n #Velocity of gesture: ",velocity)
         
-        if velocity.y >= 1500
+        if velocity.y >= 1750
         {
             self.dismiss(animated: true, completion: nil)
         }
