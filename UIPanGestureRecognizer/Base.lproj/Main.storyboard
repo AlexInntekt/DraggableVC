@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dT3-Fa-dd8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--VC1-->
+        <scene sceneID="Ayn-NQ-hLD">
+            <objects>
+                <viewController id="dT3-Fa-dd8" customClass="VC1" customModule="UIPanGestureRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q1n-iX-RRg"/>
+                        <viewControllerLayoutGuide type="bottom" id="QcF-t1-qaL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ijb-Ra-GZy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lku-wE-0lr">
+                                <rect key="frame" x="135" y="257" width="91" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="SH0-PP-W5l"/>
+                                    <constraint firstAttribute="width" constant="91" id="Xkc-QF-qhW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="Go "/>
+                                <connections>
+                                    <segue destination="A3Q-7F-TT1" kind="presentation" modalPresentationStyle="overFullScreen" id="zaX-yM-GSk">
+                                        <segue key="commit" inheritsFrom="parent" id="Ty5-un-djW"/>
+                                        <segue key="preview" inheritsFrom="commit" id="a6X-VY-QTe"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="lku-wE-0lr" firstAttribute="top" secondItem="Q1n-iX-RRg" secondAttribute="bottom" constant="237" id="7sO-Nr-aV9"/>
+                            <constraint firstItem="lku-wE-0lr" firstAttribute="leading" secondItem="ijb-Ra-GZy" secondAttribute="leadingMargin" constant="119" id="Aor-fN-2KT"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ifX-A7-vmH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-373.60000000000002" y="122.78860569715144"/>
+        </scene>
+        <!--VC2-->
+        <scene sceneID="EMX-Vo-BEM">
+            <objects>
+                <viewController id="A3Q-7F-TT1" customClass="VC2" customModule="UIPanGestureRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6fa-3M-xlW"/>
+                        <viewControllerLayoutGuide type="bottom" id="37E-bm-Ggb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MxP-4U-VNf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the second VC" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RoT-hq-7kr">
+                                <rect key="frame" x="50" y="265.5" width="274" height="136"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="136" id="N7F-6X-zso"/>
+                                    <constraint firstAttribute="width" constant="274" id="Sli-Xo-53e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="RoT-hq-7kr" firstAttribute="centerX" secondItem="MxP-4U-VNf" secondAttribute="centerX" id="YXq-Xq-KzP"/>
+                            <constraint firstItem="RoT-hq-7kr" firstAttribute="centerY" secondItem="MxP-4U-VNf" secondAttribute="centerY" id="xbv-bq-kgn"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mwy-b9-h4L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="343.19999999999999" y="122.78860569715144"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIPanGestureRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RdL-20-0KB">
+                                <rect key="frame" x="93.5" y="240" width="187.5" height="187.5"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RdL-20-0KB" secondAttribute="height" multiplier="1:1" id="YYS-6B-9t0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RdL-20-0KB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AoE-qG-eBq"/>
+                            <constraint firstItem="RdL-20-0KB" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="OZX-jG-HH7"/>
+                            <constraint firstItem="RdL-20-0KB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="y0I-54-KB5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myView" destination="RdL-20-0KB" id="vic-EH-oEs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="In9-ox-0Zr">
+                    <connections>
+                        <action selector="panGestRec:" destination="BYZ-38-t0r" id="zJc-9E-Qod"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1071" y="134"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="zaX-yM-GSk"/>
+    </inferredMetricsTieBreakers>
+</document>
