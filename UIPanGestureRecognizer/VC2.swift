@@ -45,12 +45,13 @@ class VC2: UIViewController
         self.view.center = CGPoint(x: view.center.x, y: view.center.y + dragging)
         gesture.setTranslation(CGPoint.zero, in: self.view)
         
+        
     if gesture.state == .ended
       {
         let velocity = gesture.velocity(in: self.view)
         print("\n #Velocity of gesture: ",velocity)
         
-        if velocity.y >= 1750
+        if velocity.y >= 1500
         {
             self.dismiss(animated: true, completion: nil)
         }
