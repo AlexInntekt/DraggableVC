@@ -14,9 +14,12 @@ class VC1: UIViewController
     @IBOutlet weak var visualEffectBlur: UIVisualEffectView!
     
     @IBOutlet weak var eliteView: UIView!
-    @IBOutlet weak var infoButton: UIButton!
     @IBOutlet weak var labelOne: UILabel!
     @IBOutlet weak var descriptionText: UITextView!
+    
+    @IBOutlet weak var infoButton: UIButton!
+    
+    @IBOutlet weak var goButton: UIButton!
 
     var infoState = false
     
@@ -27,18 +30,7 @@ class VC1: UIViewController
         eliteView.layer.cornerRadius = eliteView.bounds.size.height/2
         labelOne.alpha = 0
         
-        /*
-        let viewCircle = UIView()
-        
-        let screenSize: CGRect = infoButton.bounds
-        viewCircle.frame = CGRect(x: 0, y: 0, width: 50, height: screenSize.size * 2)
-        
-        viewCircle.layer.borderColor = UIColor.black.cgColor
-        viewCircle.layer.borderWidth = 3
-        viewCircle.layer.cornerRadius = infoButton.layer.bounds.size.height/2
-        
-        infoButton.addSubview(viewCircle)
- */
+        goButton.layer.cornerRadius = goButton.bounds.size.height/2
     }
     
     
@@ -49,11 +41,13 @@ class VC1: UIViewController
          {
             infoState = true
             
+            descriptionText.text = "    Tapp again on \"i\" to hide back the black screen. \n    This demonstration uses CGAffineTransform, UIView.animate and CALayer to make impressive graphic effects."
+            
             UIView.animate(withDuration: 1, animations:{
                 self.eliteView.transform = CGAffineTransform(scaleX: 7, y: 7)
                 
                 UIView.animate(withDuration: 1, animations:{
-                    self.infoButton.transform = CGAffineTransform(translationX: 1, y: -80)
+                    self.infoButton.transform = CGAffineTransform(translationX: 1, y: -130)
                 })
                 
                 UIView.animate(withDuration: 2, animations:{
@@ -68,6 +62,8 @@ class VC1: UIViewController
         else
          {
             infoState = false
+            
+            descriptionText.text = ""
             
             UIView.animate(withDuration: 1, animations:{
                 self.eliteView.transform = CGAffineTransform(scaleX: 1, y: 1)
