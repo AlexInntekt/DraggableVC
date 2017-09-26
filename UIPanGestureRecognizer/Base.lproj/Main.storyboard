@@ -125,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ifX-A7-vmH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-373.60000000000002" y="122.78860569715144"/>
+            <point key="canvasLocation" x="-710" y="134"/>
         </scene>
         <!--VC2-->
         <scene sceneID="EMX-Vo-BEM">
@@ -151,6 +151,31 @@
                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="bnD-EJ-9ac">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="This is the second VC" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RoT-hq-7kr">
+                                                        <rect key="frame" x="50" y="414" width="274" height="136"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="136" id="N7F-6X-zso"/>
+                                                            <constraint firstAttribute="width" constant="274" id="Sli-Xo-53e"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="down-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="4GT-Js-maf">
+                                                        <rect key="frame" x="162" y="29" width="50" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="52f-qE-R1k"/>
+                                                            <constraint firstAttribute="width" constant="50" id="WjC-qj-vdy"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="4GT-Js-maf" firstAttribute="top" secondItem="bnD-EJ-9ac" secondAttribute="top" constant="5" id="C0j-F8-3Q5"/>
+                                                    <constraint firstItem="4GT-Js-maf" firstAttribute="centerX" secondItem="bnD-EJ-9ac" secondAttribute="centerX" id="Xhz-j9-7ug"/>
+                                                    <constraint firstItem="RoT-hq-7kr" firstAttribute="centerX" secondItem="bnD-EJ-9ac" secondAttribute="centerX" id="x2e-zh-Es0"/>
+                                                    <constraint firstAttribute="bottom" secondItem="RoT-hq-7kr" secondAttribute="bottom" constant="117" id="z3v-p8-U33"/>
+                                                </constraints>
                                             </view>
                                             <vibrancyEffect>
                                                 <blurEffect style="light"/>
@@ -161,30 +186,18 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="0.4041095890410959" colorSpace="calibratedRGB"/>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the second VC" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RoT-hq-7kr">
-                                <rect key="frame" x="50" y="265.5" width="274" height="136"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="136" id="N7F-6X-zso"/>
-                                    <constraint firstAttribute="width" constant="274" id="Sli-Xo-53e"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <constraints>
                             <constraint firstItem="xKb-uY-hSN" firstAttribute="centerY" secondItem="MxP-4U-VNf" secondAttribute="centerY" id="CvP-sx-MPg"/>
-                            <constraint firstItem="RoT-hq-7kr" firstAttribute="centerX" secondItem="MxP-4U-VNf" secondAttribute="centerX" id="YXq-Xq-KzP"/>
                             <constraint firstItem="xKb-uY-hSN" firstAttribute="centerX" secondItem="MxP-4U-VNf" secondAttribute="centerX" id="nh6-yp-jqK"/>
                             <constraint firstItem="xKb-uY-hSN" firstAttribute="width" secondItem="MxP-4U-VNf" secondAttribute="width" id="tHT-9N-hCq"/>
                             <constraint firstItem="xKb-uY-hSN" firstAttribute="height" secondItem="MxP-4U-VNf" secondAttribute="height" id="wVF-h0-Hnh"/>
-                            <constraint firstItem="RoT-hq-7kr" firstAttribute="centerY" secondItem="MxP-4U-VNf" secondAttribute="centerY" id="xbv-bq-kgn"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mwy-b9-h4L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="343.19999999999999" y="122.78860569715144"/>
+            <point key="canvasLocation" x="42" y="134"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -216,20 +229,45 @@
                     </view>
                     <connections>
                         <outlet property="myView" destination="RdL-20-0KB" id="vic-EH-oEs"/>
+                        <outlet property="viewSupport" destination="aaV-E6-TOV" id="dDk-oe-dHb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="aaV-E6-TOV">
+                    <rect key="frame" x="0.0" y="0.0" width="373" height="598"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="In9-ox-0Zr">
                     <connections>
                         <action selector="panGestRec:" destination="BYZ-38-t0r" id="zJc-9E-Qod"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1071" y="134"/>
+            <point key="canvasLocation" x="1078" y="125"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IOq-D0-UAI">
+            <objects>
+                <viewController storyboardIdentifier="VCtoBeUsed" id="5KH-Ap-tAd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7bU-QC-1hf"/>
+                        <viewControllerLayoutGuide type="bottom" id="hEJ-ws-fRd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AgU-HC-bOy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nx7-Ek-Ki3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1982" y="125"/>
         </scene>
     </scenes>
     <resources>
         <image name="0216-wood-texture2" width="990" height="661"/>
+        <image name="down-arrow" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="zaX-yM-GSk"/>

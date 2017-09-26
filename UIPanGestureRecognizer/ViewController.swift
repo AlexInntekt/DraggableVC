@@ -13,6 +13,7 @@ class ViewController: UIViewController
 
     
     @IBOutlet weak var myView: UIView!
+    @IBOutlet var viewSupport: UIView!
 
     //this function hides the status bar upwards:
     override var prefersStatusBarHidden: Bool
@@ -27,7 +28,15 @@ class ViewController: UIViewController
         
         let panGR = UIPanGestureRecognizer(target: self, action: #selector(panGestR(_:)))
         self.myView.addGestureRecognizer(panGR)
+        
+        self.view.addSubview(viewSupport)
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "VCtoBeUsed")
+        self.addChildViewController(vc!)
+        self.viewSupport.addSubview((vc?.view)!)
+        vc?.view.frame = viewSupport.bounds
     }
+    
 
     func panGestR(_ sender: UIPanGestureRecognizer)
     {
